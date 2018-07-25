@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<style>
+			*{
+				box-sizing : border-box;
+			}
+			body,html {
+				padding : 5px;
+				margin  : 0;
+				color : white;
+				text-align : center;
+				overflow-Y :auto;
+				font-family : century gothic,consolas,sans-serif;
+				height:100%;
+			}
+			body {
+				background-color : rgba(0,0,0,0.87);
+			}
+			h1,h4 {
+				color : white;
+			}
+			#textbox {
+				width  		: 75%;
+				height 		: 10%;
+				font-size   : 20px;
+				font-family : century gothic,consolas,sans-serif;
+				border-radius : 3px;
+				border      : 1px solid white;
+				background-color : transparent;
+				color : rgba(255,255,255,0.87);
+			}
+			button {
+				width:50%;
+				padding : 5px;
+				background-color : transparent;
+				color : white;
+			}	
+		</style>
+	</head>
+	<body>
+	<div id = "first">
+		Enter the name you wish to be called : <input type = "text" id = "textbox" placeholder = " Your sweet name... ">
+		<button onclick = "takeValue()">Submit</button>
+	</div>
+	<h1 id = "h1"></h1>
+	<h3 id = "h3"></h3>
+		<script>
+			
+			var first = document.getElementById("first");
+			var h1 = document.getElementById("h1");
+			var h3 = document.getElementById("h3");
+			function takeValue() {
+				var name = document.getElementById("textbox").value;
+				first.style.display = "none";
+				h1.innerHTML = "God so loved " + name +	" that He gave His only begotten Son Jesus Christ so that " + name + ", who believes in Him will never perish but will have" +
+                " eternal life ";
+                h3.innerHTML = "God bless you dear " + name;
+				
+				
+			}
+			
+		</script>
+	</body>
+</html>
