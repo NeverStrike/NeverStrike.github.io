@@ -1,169 +1,169 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Hello</title>
-	<style>
-	    *{
-                 box-sizing       : border-box        ;
-                 }
-	    body,html {
-				height           : 100%              ;
-				padding          :    0              ;
-				margin           :    0              ;
-				font-family      : century gothic,consolas,sans-serif;
-                 }
-            .header {
-				height           :  8%		      ;
-				background-color :  rgba(0,0,0,0.87) ;
-                 overflow         :  auto             ;
-                 border-bottom    :  1px solid lightgrey   ;
-		 }
-	    .title {
-		 color            : white        ;
-                 font-family      : century gothic,consolas,sans-serif;
-                 float            : left              ;
-                 position	  : relative	      ;
-    	       	 top              : 50%               ;
-				transform	  : translateY(-50%)  ;
-				height		  : fit-content       ;
-				width		  : 80%               ;
-                 text-align       : center            ;
-		 }
-	    .menu-bar {
-				 background-color :rgba(255,255,255,0.8)             ;
-                 width            : 18px              ;
-                 height           : 3px               ;
-                 margin           : 3px               ;
-                 border           : 1px solid rgba(255,255,255,0.8) ;
-                 margin-left      : 50%               ;
-				 transition       : all 0.3s ease-in-out;
-                 
-		}
-             .menu {
-				position	  : relative	      ;
-				top               : 50%               ;
-				transform	  : translateY(-50%)  ;
-				height		  : fit-content       ;
-				width		  : 10%               ;
-                float             : left              ; 
-		}
-              .nav a {
-                display           : block             ;
-                background-color  : rgba(0,0,0,0.87)  ;
-                color             : rgba(0,0,0,0.87);
-                text-decoration   : none              ;
-                text-align        : center            ;
-                border-bottom     : 1px solid lightgrey   ;
-                padding           : 0px               ;
-				transition    : all 0.4s ease-in-out,color 0.4s ease-in-out, background-color 0.3s ease-in-out;
-				max-height        : 0;
-				overflow          : hidden;
-				opacity           : 0;
-                
-                     }
-			    .nav a.navDown {
-					max-height    : 100px;
-					padding       : 10px;
-					opacity       : 1;
-					color         : rgba(255,255,255,1);
-					
-					transition        : all 0.4s ease-in-out,color 0.4s ease-in-out;
-				}
-				.nav a:hover,.nav a:active {
-					background-color : brown;
-					color            : white;
-				}
-				.hideVideo {
-					display      : none;
-				}
-				.hideButton {
-					width        : 100%;
-					display      : block;
-					background-color : black;
-					color : white;
-					padding : 5px;
-                    border-radius : 3px;					
-				}
-				.frame {
-					width : 100%;
-					height : 91%;
-					text-align :center;
-				}
-				#op1 {
-					transition-delay:0s;
-				}
-				#op2{
-					transition-delay:0.25s;
-				}
-				#op3{
-					transition-delay:0.50s;
-				}
-				#op4 {
-					transition-delay:0.75s;
-				}
-				#op5{
-					transition-delay:2.0s;
-				}
-				#op6{
-					transition-delay:2.25s;
-				}
-				#op7{
-					transition-delay:2.50s;
-				}
-				.bar1.close {
-					transform : translateY(6px) rotate(45deg);
-				}
-				.bar2.close {
-					transform : rotate(-45deg);
-				}
-				.bar3.close {
-					display : none;
-				}
-				
-				
-	</style>
-    </head>
-    <body>
-	<div class = "header">
-	    <div class = "menu">
-	        <div class = "menu-bar bar1"></div>
-			<div class = "menu-bar bar2"></div>
-			<div class = "menu-bar bar3"></div>	
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello
+    </title>
+    <style>
+      *{
+        box-sizing       : border-box        ;
+      }
+      body,html {
+        height           : 100%              ;
+        padding          :    0              ;
+        margin           :    0              ;
+        font-family      : century gothic,consolas,sans-serif;
+      }
+      .header {
+        height           :  8%		      ;
+        background-color :  rgba(0,0,0,0.87) ;
+        overflow         :  auto             ;
+        border-bottom    :  1px solid lightgrey   ;
+      }
+      .title {
+        color            : white        ;
+        font-family      : century gothic,consolas,sans-serif;
+        float            : left              ;
+        position	  : relative	      ;
+        top              : 50%               ;
+        transform	  : translateY(-50%)  ;
+        height		  : fit-content       ;
+        width		  : 80%               ;
+        text-align       : center            ;
+      }
+      .menu-bar {
+        background-color :rgba(255,255,255,0.8)             ;
+        width            : 18px              ;
+        height           : 3px               ;
+        margin           : 3px               ;
+        border           : 1px solid rgba(255,255,255,0.8) ;
+        margin-left      : 50%               ;
+        transition       : all 0.3s ease-in-out;
+      }
+      .menu {
+        position	  : relative	      ;
+        top               : 50%               ;
+        transform	  : translateY(-50%)  ;
+        height		  : fit-content       ;
+        width		  : 10%               ;
+        float             : left              ;
+      }
+      .nav a {
+        display           : block             ;
+        background-color  : rgba(0,0,0,0.87)  ;
+        color             : rgba(0,0,0,0.87);
+        text-decoration   : none              ;
+        text-align        : center            ;
+        border-bottom     : 1px solid lightgrey   ;
+        padding           : 0px               ;
+        transition    : all 0.4s ease-in-out,color 0.4s ease-in-out, background-color 0.3s ease-in-out;
+        max-height        : 0;
+        overflow          : hidden;
+        opacity           : 0;
+      }
+      .nav a.navDown {
+        max-height    : 100px;
+        padding       : 10px;
+        opacity       : 1;
+        color         : rgba(255,255,255,1);
+        transition        : all 0.4s ease-in-out,color 0.4s ease-in-out;
+      }
+      .nav a:hover,.nav a:active {
+        background-color : brown;
+        color            : white;
+      }
+      .hideVideo {
+        display      : none;
+      }
+      .hideButton {
+        width        : 100%;
+        display      : block;
+        background-color : black;
+        color : white;
+        padding : 5px;
+        border-radius : 3px;
+      }
+      .frame {
+        width : 100%;
+        height : 91%;
+        text-align :center;
+      }
+      #op1 {
+        transition-delay:0s;
+      }
+      #op2{
+        transition-delay:0.25s;
+      }
+      #op3{
+        transition-delay:0.50s;
+      }
+      #op4 {
+        transition-delay:0.75s;
+      }
+      #op5{
+        transition-delay:2.0s;
+      }
+      #op6{
+        transition-delay:2.25s;
+      }
+      #op7{
+        transition-delay:2.50s;
+      }
+      .bar1.close {
+        transform : translateY(6px) rotate(45deg);
+      }
+      .bar2.close {
+        transform : rotate(-45deg);
+      }
+      .bar3.close {
+        display : none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class = "header">
+      <div class = "menu">
+        <div class = "menu-bar bar1">
         </div>
-        <div class = "title">
-            God's words
+        <div class = "menu-bar bar2">
         </div>
-	</div>
-    <div class = "nav">
-        <a id = "op1" href = "home.html" target = "mainFrame" active>Home</a>
-        <a id = "op2" href = "about.html" target = "mainFrame">About</a>
-		<a href = "https://www.youtube.com/embed/YLnxVPS4rYI" target = "mainFrame" id = "op3">Watch A Video Song</a>
-		<a href = "personalised.html" id = "op4" target = "mainFrame">Have a personalised scripture</a>
+        <div class = "menu-bar bar3">
+        </div>	
+      </div>
+      <div class = "title">
+        God's words
+      </div>
     </div>
-	<iframe class = "frame" name = "mainFrame" frameborder = "0" src = "home.html"></iframe>
-        <script> 
-         var menu = document.querySelector('.menu');
-		 var nav = document.querySelectorAll('.nav a');
-		 var vid = document.querySelectorAll('.videoShow')[0];
-		 var main = document.querySelectorAll('.main');
-		 var menubars = document.querySelectorAll('.menu-bar');
-		 menu.addEventListener("click",function() {
-		    for(var i = 0;i<nav.length;i++)
-			nav[i].classList.toggle('navDown');
-			for(var k = 0;k<menubars.length;k++)
-			menubars[k].classList.toggle('close');
-			
-			});
-			
-		function hideVideo() {
-			vid.classList.toggle('hideVideo');
-			this.style.opacity = "0";
-			this.style.display = "none"
-		}
-
-			
-        </script>
-    </body>
+    <div class = "nav">
+      <a id = "op1" href = "home.html" target = "mainFrame" active>Home
+      </a>
+      <a id = "op2" href = "about.html" target = "mainFrame">About
+      </a>
+      <a href = "https://www.youtube.com/embed/YLnxVPS4rYI" target = "mainFrame" id = "op3">Watch A Video Song
+      </a>
+      <a href = "personalised.html" id = "op4" target = "mainFrame">Have a personalised scripture
+      </a>
+    </div>
+    <iframe class = "frame" name = "mainFrame" frameborder = "0" src = "home.html">
+    </iframe>
+    <script> 
+      var menu = document.querySelector('.menu');
+      var nav = document.querySelectorAll('.nav a');
+      var vid = document.querySelectorAll('.videoShow')[0];
+      var main = document.querySelectorAll('.main');
+      var menubars = document.querySelectorAll('.menu-bar');
+      menu.addEventListener("click",function() {
+        for(var i = 0;i<nav.length;i++)
+          nav[i].classList.toggle('navDown');
+        for(var k = 0;k<menubars.length;k++)
+          menubars[k].classList.toggle('close');
+      }
+                           );
+      function hideVideo() {
+        vid.classList.toggle('hideVideo');
+        this.style.opacity = "0";
+        this.style.display = "none"
+      }
+    </script>
+  </body>
 </html>
-
