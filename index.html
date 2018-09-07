@@ -5,14 +5,18 @@
     <title>Hello
     </title>
     <style>
+		@font-face {
+			font-family: droid;
+			src: url(droid-sans/DroidSans.ttf);
+		}
       *{
         box-sizing       : border-box        ;
+        font-family	: droid;
       }
       body,html {
         height           : 100%              ;
         padding          :    0              ;
         margin           :    0              ;
-        font-family      : century gothic,consolas,sans-serif;
       }
       .header {
         height           :  8%		      ;
@@ -22,7 +26,6 @@
       }
       .title {
         color            : white        ;
-        font-family      : century gothic,consolas,sans-serif;
         float            : left              ;
         position	  : relative	      ;
         top              : 50%               ;
@@ -157,8 +160,14 @@
           nav[i].classList.toggle('navDown');
         for(var k = 0;k<menubars.length;k++)
           menubars[k].classList.toggle('close');
+      })
+      for(let counter=0; counter<nav.length; counter++){
+		nav[counter].onclick= function(){
+			debugger;
+			menu.click();
+		}
       }
-                           );
+   
       function hideVideo() {
         vid.classList.toggle('hideVideo');
         this.style.opacity = "0";
