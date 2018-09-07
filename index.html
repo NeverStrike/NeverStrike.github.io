@@ -20,7 +20,8 @@
       }
       .header {
         height           :  8%		      ;
-        background-color :  rgba(0,0,0,0.87) ;
+        
+background-color:hsl(276, 100%, 30%);
         overflow         :  auto             ;
         border-bottom    :  1px solid lightgrey   ;
       }
@@ -33,6 +34,10 @@
         height		  : fit-content       ;
         width		  : 80%               ;
         text-align       : center            ;
+	box-sizing : border-box;
+	padding:8px 0px 8px 0px;
+font-size:20px;	
+text-transform:capitalize;
       }
       .menu-bar {
         background-color :rgba(255,255,255,0.8)             ;
@@ -53,7 +58,7 @@
       }
       .nav a {
         display           : block             ;
-        background-color  : rgba(0,0,0,0.87)  ;
+        background-color  : hsl(276, 100%, 30%);
         color             : rgba(0,0,0,0.87);
         text-decoration   : none              ;
         text-align        : center            ;
@@ -154,7 +159,7 @@
       var nav = document.querySelectorAll('.nav a');
       var vid = document.querySelectorAll('.videoShow')[0];
       var main = document.querySelectorAll('.main');
-      var menubars = document.querySelectorAll('.menu-bar');
+      var menubars = document.querySelectorAll('.menu-bar'); 
       menu.addEventListener("click",function() {
         for(var i = 0;i<nav.length;i++)
           nav[i].classList.toggle('navDown');
@@ -163,7 +168,6 @@
       })
       for(let counter=0; counter<nav.length; counter++){
 		nav[counter].onclick= function(){
-			debugger;
 			menu.click();
 		}
       }
