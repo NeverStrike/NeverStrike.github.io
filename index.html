@@ -21,14 +21,18 @@
           height: 100%;
           padding: 0;
           margin: 0;
-          background-colour: rgba(255, 255, 255, 0.8)
+          background-color: rgba(255, 255, 255, 0.8);
+          color: rgb(62, 83, 117);
       }
 
       .header {
           height: 8%;
-          background-color: hsl(240, 59%, 40%);
+/*           background-color: hsl(220, 100%, 55%); */
+          background-image: linear-gradient(to bottom right, dodgerblue, hsl(220, 100%, 55%));
           overflow: auto;
           border-bottom: 1px solid lightgrey;
+          z-index:2;
+          box-shadow:0 5px 18px 0 rgba(0,0,0,0.2)
       }
 
       .title {
@@ -46,8 +50,8 @@
           text-align: center;
           -webkit-box-sizing: border-box;
                   box-sizing: border-box;
-          padding: 8px 0px 8px 0px;
-          font-size: 20px;
+          padding: 10px 10px 8px 0px;
+          font-size: 25px;
           text-transform: capitalize;
       }
 
@@ -58,9 +62,9 @@
           margin: 3px;
           border: 1px solid rgba(255, 255, 255, 0.8);
           margin-left: 50%;
-          -webkit-transition: all 0.3s ease-in-out;
-          -o-transition: all 0.3s ease-in-out;
-          transition: all 0.3s ease-in-out;
+          -webkit-transition: all 0.24s ease-in-out;
+          -o-transition: all 0.24s ease-in-out;
+          transition: all 0.24s ease-in-out;
       }
 
       .menu {
@@ -78,15 +82,15 @@
 
       .nav a {
           display: block;
-          background-color: hsl(240, 59%, 40%);
+          background-image: linear-gradient(to bottom right, dodgerblue, hsl(220, 100%, 55%));
           color: rgba(0, 0, 0, 0.87);
           text-decoration: none;
           text-align: center;
           border-bottom: 1px solid lightgrey;
           padding: 0px;
-          -webkit-transition: all 0.4s ease-in-out, color 0.4s ease-in-out, background-color 0.3s ease-in-out;
-          -o-transition: all 0.4s ease-in-out, color 0.4s ease-in-out, background-color 0.3s ease-in-out;
-          transition: all 0.4s ease-in-out, color 0.4s ease-in-out, background-color 0.3s ease-in-out;
+          -webkit-transition: all 0.24s ease-in-out, color 0.24s ease-in-out, background-color 0.24s ease-in-out;
+          -o-transition: all 0.24s ease-in-out, color0.24s ease-in-out, background-color 0.24s ease-in-out;
+          transition: all 0.24s ease-in-out, color 0.24s ease-in-out, background-color 0.24s ease-in-out;
           max-height: 0;
           overflow: hidden;
           opacity: 0;
@@ -97,15 +101,28 @@
           padding: 10px;
           opacity: 1;
           color: rgba(255, 255, 255, 1);
-          -webkit-transition: all 0.4s ease-in-out, color 0.4s ease-in-out;
-          -o-transition: all 0.4s ease-in-out, color 0.4s ease-in-out;
-          transition: all 0.4s ease-in-out, color 0.4s ease-in-out;
+          -webkit-transition: all 0.24s ease-in-out, color 0.24s ease-in-out;
+          -o-transition: all 0.24s ease-in-out, color 0.24s ease-in-out;
+          transition: all 0.24s ease-in-out, color 0.24s ease-in-out;
       }
 
       .nav a:hover,
       .nav a:active {
           background-color: brown;
           color: white;
+      }
+      .nav{        
+        z-index:0;
+        position:absolute;
+        width:0%;
+        overflow:hidden;
+        height:fit-content;
+      }
+      .nav.down {
+        z-index:2;
+        background-color:rgba(0,0,0,0.67);
+        height:100%;
+        width:100%;
       }
 
       .hideVideo {
@@ -125,6 +142,7 @@
           width: 100%;
           height: 91%;
           text-align: center;
+          transition:all 0.5s ease-in-out;
       }
 
       #op1 {
@@ -134,39 +152,39 @@
       }
 
       #op2 {
-          -webkit-transition-delay: 0.25s;
-               -o-transition-delay: 0.25s;
-                  transition-delay: 0.25s;
+          -webkit-transition-delay: 0.01s;
+               -o-transition-delay: 0.01s;
+                  transition-delay: 0.01s;
       }
 
       #op3 {
-          -webkit-transition-delay: 0.50s;
-               -o-transition-delay: 0.50s;
-                  transition-delay: 0.50s;
+          -webkit-transition-delay: 0.02s;
+               -o-transition-delay: 0.02s;
+                  transition-delay: 0.02s;
       }
 
       #op4 {
-          -webkit-transition-delay: 0.75s;
-               -o-transition-delay: 0.75s;
-                  transition-delay: 0.75s;
+          -webkit-transition-delay: 0.03s;
+               -o-transition-delay: 0.03s;
+                  transition-delay: 0.03s;
       }
 
       #op5 {
-          -webkit-transition-delay: 2.0s;
-               -o-transition-delay: 2.0s;
-                  transition-delay: 2.0s;
+          -webkit-transition-delay: 0.04s;
+               -o-transition-delay: 0.04s;
+                  transition-delay: 0.04s;
       }
 
       #op6 {
-          -webkit-transition-delay: 2.25s;
-               -o-transition-delay: 2.25s;
-                  transition-delay: 2.25s;
+          -webkit-transition-delay: 0.05s;
+               -o-transition-delay: 0.05s;
+                  transition-delay: 0.05s;
       }
 
       #op7 {
-          -webkit-transition-delay: 2.50s;
-               -o-transition-delay: 2.50s;
-                  transition-delay: 2.50s;
+          -webkit-transition-delay: 0.06s;
+               -o-transition-delay: 0.06s;
+                  transition-delay: 0.06s;
       }
 
       .bar1.close {
@@ -218,17 +236,36 @@
       var vid = document.querySelectorAll('.videoShow')[0];
       var main = document.querySelectorAll('.main');
       var menubars = document.querySelectorAll('.menu-bar');
+      let navigatorDrawer = document.querySelector('.nav');
+      let header = document.querySelector('.header');
+      
+      header.onclick = function(){
+        menu.click();
+      }
+      
       menu.addEventListener("click", function () {
           for (var i = 0; i < nav.length; i++)
               nav[i].classList.toggle('navDown');
           for (var k = 0; k < menubars.length; k++)
               menubars[k].classList.toggle('close');
+          navigatorDrawer.classList.toggle('down');
+          function disappear(){
+            menu.click();
+          }
+          navigatorDrawer.onclick = function(){
+            if(navigatorDrawer.classList.contains('down')){
+              menu.click();
+              navigatorDrawer.classList.remove('down');
+              
+            }
+          }
       })
       for (let counter = 0; counter < nav.length; counter++) {
           nav[counter].onclick = function () {
               menu.click();
           }
       }
+      
 
       function hideVideo() {
           vid.classList.toggle('hideVideo');

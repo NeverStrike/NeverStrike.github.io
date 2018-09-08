@@ -11,29 +11,20 @@
           -webkit-box-sizing: border-box;
           box-sizing: border-box;
           font-family: droid;
-          color: white;
       }
 
       body,
       html {
           margin: 0;
           padding: 7px;
-          color: white;
           overflow-Y: auto;
           height: 100%;
-          background-color: rgba(0, 0, 0, 0.87);
+          background-color: rgba(255, 255, 255, 0.8);
+          color: rgb(62, 83, 117);
           text-align: center;
       }
 
-      body {
-          background-color: rgba(0, 0, 0, 0.87);
-          padding: 7px
-      }
-
-      h2,
-      h3 {
-          color: white;
-      }
+   
 
       #first {
           display: -webkit-box;
@@ -46,11 +37,11 @@
           -webkit-box-align: center;
           -ms-flex-align: center;
           align-items: center;
-          color: white;
           margin-top: 20%;
       }
 
       #textbox {
+          outline: none;
           margin-top: 16px;
           -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -66,7 +57,13 @@
           height: -webkit-fit-content;
           height: -moz-fit-content;
           height: fit-content;
-          display: block
+          display: block;
+          transition:all 0.3s ease-in-out;
+      }
+      input#textbox:focus {
+          width: 90%;
+          height: 40px;
+          font-size: 4vw;
       }
 
       #submit {
@@ -80,7 +77,80 @@
           border-bottom-right-radius: 16px;
           display: block;
           width: 25%;
-      }      
+      }
+      ::-webkit-input-placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+          color: white;
+          opacity: 1; /* Firefox */
+          -webkit-transition:all 0.3s ease-in-out;
+          -o-transition:all 0.3s ease-in-out;
+          transition:all 0.3s ease-in-out;
+      }
+      :-ms-input-placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+          color: white;
+          opacity: 1; /* Firefox */
+          -webkit-transition:all 0.3s ease-in-out;
+          -o-transition:all 0.3s ease-in-out;
+          transition:all 0.3s ease-in-out;
+      }
+      ::-ms-input-placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+          color: white;
+          opacity: 1; /* Firefox */
+          -webkit-transition:all 0.3s ease-in-out;
+          -o-transition:all 0.3s ease-in-out;
+          transition:all 0.3s ease-in-out;
+      }
+      ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+          color: white;
+          opacity: 1; /* Firefox */
+          -webkit-transition:all 0.3s ease-in-out;
+          -o-transition:all 0.3s ease-in-out;
+          transition:all 0.3s ease-in-out;
+      }
+      h1,
+      h3 {
+          visibility:hidden;
+          opacity:0;
+          transition:all 2s ease-in-out;
+      }
+      .visibleText {
+          visibility:visible;
+          opacity:1;
+      }
+      .spinner {
+        width: 50px;
+        height: 50px;
+        border: 3px solid dodgerblue;
+        border-top-color: skyblue;
+        border-radius: 50%;
+        transform: translate(-50%,30%) rotate(0deg);
+        position: relative;
+        top: 30%;
+        left: 50%;
+        display: none;
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 0.4s ease-in-out, opacity 0.4s ease-in-out;        
+      }
+      .spinner-visible{
+        display:block;
+        visibility:visible;
+        opacity:1;        
+        animation-name: loader;
+        animation-duration: 0.5s;
+        animation-timing-function: linear;
+        animation-iteration-count:infinite;
+      }
+      @keyframes loader {
+        0% {
+          visibility:visible;
+          transform: translate(-50%,50%) rotate(0deg)
+        }
+        100% {
+          visibility:hidden;
+          transform: translate(-50%,50%) rotate(360deg)
+        }
+      }
+
     </style>
   </head>
   <body>
@@ -90,21 +160,37 @@
           <input type="submit" id="submit" value="submit">
           </input>
       </form>
+      <div class="spinner"> </div>
       <h1 id = "h1">
       </h1>
       <h3 id = "h3">
       </h3>  
       <script>     
-        var first = document.getElementById("first");
-        var h1 = document.getElementById("h1");
-        var h3 = document.getElementById("h3");
+        let first = document.getElementById("first");
+        let h1 = document.getElementById("h1");
+        let h3 = document.getElementById("h3");
+        let spinner = document.querySelector('.spinner');
+        let spinTime = 2000;
 
         function takeValue() {
-            var name = document.getElementById("textbox").value;
-            first.style.display = "none";
-            h1.innerHTML = "God so loved " + name + " that He gave His only begotten Son Jesus Christ so that " + name + ", who believes in Him will never perish but will have" +
-                " eternal life ";
-            h3.innerHTML = "God bless you dear " + name;
+            let name = document.getElementById("textbox").value;
+            if(name != ''){
+              first.style.display = "none";
+              h1.innerHTML =  "God loved you so much dear " + name +
+                              ", that He gave His only begotten Son Jesus Christ, for you. "+
+                              "All you need to do is believe in Him. "+
+                              "If you do so, you will never perish "+
+                              "and will have eternal life."
+              h3.innerHTML =  "God still loves you dear " + name+
+                              "<br>God bless you"
+              spinner.classList.add('spinner-visible');
+              let spinning = setTimeout(function(){
+                spinner.classList.remove('spinner-visible');
+                h1.classList.add('visibleText')
+                h3.classList.add('visibleText')
+              },spinTime)
+              
+            }            
         }
       </script>
   </body>
