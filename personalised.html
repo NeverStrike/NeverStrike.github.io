@@ -3,89 +3,109 @@
   <head>
     <style>
       @font-face {
-        font-family: droid;
-        src: url(droid-sans/DroidSans.ttf);
+          font-family: droid;
+          src: url(droid-sans/DroidSans.ttf);
       }
-      *{
-        box-sizing : border-box;
-        font-family: droid;
-	color : white;
+
+      * {
+          -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+          font-family: droid;
+          color: white;
       }
-      body,html {
-        margin  : 0;
-	padding:7px;
-        color : white;
-        overflow-Y :auto;
-        height:100%;
-	background-color : rgba(0,0,0,0.87);
-	text-align:center;
+
+      body,
+      html {
+          margin: 0;
+          padding: 7px;
+          color: white;
+          overflow-Y: auto;
+          height: 100%;
+          background-color: rgba(0, 0, 0, 0.87);
+          text-align: center;
       }
+
       body {
-        background-color : rgba(0,0,0,0.87);
-padding:7px
+          background-color: rgba(0, 0, 0, 0.87);
+          padding: 7px
       }
-      h2,h3 {
-        color : white;
+
+      h2,
+      h3 {
+          color: white;
       }
-#first{
- 	display: flex;
-flex-direction: column;
-align-items: center;
-color: white;
-margin-top: 20%;
-}
+
+      #first {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+          flex-direction: column;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          align-items: center;
+          color: white;
+          margin-top: 20%;
+      }
+
       #textbox {
-        margin-top : 16px;
-        box-sizing : border-box;
-        border-top-left-radius	:	16px;
-        border-top-right-radius	:	16px;
-        border-bottom-left-radius	:	16px;
-        border-bottom-right-radius	:	16px;
-        border :	 1px solid white;
-        background-color : rgb(112, 148, 219);
-        color : white;
-        padding: 8px 4px 4px 8px;
-	width:75%;
-	height:fit-content;
-	display:block
+          margin-top: 16px;
+          -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+          border-top-left-radius: 16px;
+          border-top-right-radius: 16px;
+          border-bottom-left-radius: 16px;
+          border-bottom-right-radius: 16px;
+          border: 1px solid white;
+          background-color: rgb(112, 148, 219);
+          color: white;
+          padding: 8px 4px 4px 8px;
+          width: 75%;
+          height: -webkit-fit-content;
+          height: -moz-fit-content;
+          height: fit-content;
+          display: block
       }
+
       #submit {
-        margin-top	:	16px;
-        padding	:	5px;
-        background-color	:	rgba(0, 153, 51,0.4);
-        color 	:	white;
-        border-top-left-radius	:	16px;
-        border-top-right-radius	:	16px;
-        border-bottom-left-radius	:	16px;
-        border-bottom-right-radius	:	16px;
-	display:block;
-	width:25%;
-      }
+          margin-top: 16px;
+          padding: 5px;
+          background-color: rgba(0, 153, 51, 0.4);
+          color: white;
+          border-top-left-radius: 16px;
+          border-top-right-radius: 16px;
+          border-bottom-left-radius: 16px;
+          border-bottom-right-radius: 16px;
+          display: block;
+          width: 25%;
+      }      
     </style>
   </head>
   <body>
-    <form id = "first" onsubmit="takeValue();return false;">
-      Enter the name you wish to be called : 
-      <input type = "text" id = "textbox" placeholder = " Your sweet name... ">
-      <input type="submit" id="submit" value="submit">
-      </input>
-    </form>
-    <h1 id = "h1">
-    </h1>
-    <h3 id = "h3">
-    </h3>
-    <script>
-      var first = document.getElementById("first");
-      var h1 = document.getElementById("h1");
-      var h3 = document.getElementById("h3");
-      function takeValue() {
-        var name = document.getElementById("textbox").value;
-        first.style.display = "none";
-        h1.innerHTML = "God so loved " + name +	" that He gave His only begotten Son Jesus Christ so that " + name + ", who believes in Him will never perish but will have" +
-          " eternal life ";
-        h3.innerHTML = "God bless you dear " + name;
-	
-      }
-    </script>
+      <form id = "first" onsubmit="takeValue();return false;">
+          Enter the name you wish to be called : 
+          <input type = "text" id = "textbox" placeholder = " Your sweet name... ">
+          <input type="submit" id="submit" value="submit">
+          </input>
+      </form>
+      <h1 id = "h1">
+      </h1>
+      <h3 id = "h3">
+      </h3>  
+      <script>     
+        var first = document.getElementById("first");
+        var h1 = document.getElementById("h1");
+        var h3 = document.getElementById("h3");
+
+        function takeValue() {
+            var name = document.getElementById("textbox").value;
+            first.style.display = "none";
+            h1.innerHTML = "God so loved " + name + " that He gave His only begotten Son Jesus Christ so that " + name + ", who believes in Him will never perish but will have" +
+                " eternal life ";
+            h3.innerHTML = "God bless you dear " + name;
+        }
+      </script>
   </body>
 </html>
