@@ -1,51 +1,59 @@
 <!DOCTYPE HTML>
 <html>
-	<head>
-		<style>
-			@font-face {
-				font-family: droid;
-				src: url(droid-sans/DroidSans.ttf);
-			}
-			*{
-				box-sizing : border-box;
-				font-family: droid;
-			}
-			
-			body,html {
-				padding : 0;
-				margin  : 0;
-				color : white;
-				text-align : center;
-				overflow-Y:auto;
-				font-family      : century gothic,consolas,sans-serif;
-			}
-			body {
-				background-color : rgba(0,0,0,0.87);
-			}
-			div {
-				height : fit-content;
-				margin-top : 20%;
-			}
-		</style>
-	</head>
-	<body>
-		<p id = "para"></p>
-		<div>
-		<address>No Copyrights allowed</address>
-		</div>
-		<script>
-			var a = "This is a website developed to express God's word's seen in the Bible. Currently this is in development stage. Thank you for visiting";
-			var b = document.getElementById("para");
-			var timer = setInterval(frame,50);
-			var i = 0;
-			function frame() {
-			if (i<a.length) {
-				b.innerHTML += a.charAt(i);
-				if (i==(a.length-1))
-				    clearInterval(timer);
-			}
-			i++;
-			}
-		</script>
-	</body>
+   <head>
+      <style>        
+        @font-face {
+            font-family: droid;
+            src: url(droid-sans/DroidSans.ttf);
+        }
+
+        * {
+            -webkit-box-sizing: border-box;
+                    box-sizing: border-box;
+            font-family: droid;
+        }
+
+        body,
+        html {
+            padding: 0;
+            margin: 0;
+            color: white;
+            text-align: center;
+            overflow-Y: auto;
+            font-family: century gothic, consolas, sans-serif;
+        }
+
+        body {
+            background-color: rgba(0, 0, 0, 0.87);
+        }
+
+        div {
+            height: -webkit-fit-content;
+            height: -moz-fit-content;
+            height: fit-content;
+            margin-top: 20%;
+        }
+      </style>
+   </head>
+   <body>
+      <p id = "para"></p>
+      <div>
+         <address>No Copyrights allowed</address>
+      </div>
+      <script>     
+        var a = "This is a website developed to express God's word's seen in the Bible. Currently this is in development stage. Thank you for visiting";
+        var b = document.getElementById("para");
+        var timer = setInterval(frame, 50);
+        var i = 0;
+        
+        function frame() {
+            if (i < a.length) {
+                b.innerHTML += a.charAt(i);
+                if (i == (a.length - 1))
+                    clearInterval(timer);
+            }
+            i++;
+        }
+      </script>
+   </body>
 </html>
